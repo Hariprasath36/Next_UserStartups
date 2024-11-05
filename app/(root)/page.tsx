@@ -8,8 +8,10 @@ export default async function Home({searchParams}:{
     searchParams:Promise< {query?: string}>
 }){
   const query = (await searchParams).query;
-  const posts = [{_createdAt:'Yesterday',
+  const posts = [{
+    _createdAt:new Date(),
     views:55,
+    author: {_id:1,name:'Hari'},
     _id:1,
     description: "this is ",
     image:"/logo.png",
