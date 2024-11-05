@@ -11,18 +11,7 @@ export default async function Home({searchParams}:{
 }){
   const query = (await searchParams).query;
   const posts = await client.fetch(STARTUPS_QUERY);
-  console.log(JSON.stringify(posts,null,2))
-//   const posts = [{
-//     _createdAt:new Date(),
-//     views:55,
-//     author: {_id:1,name:'Hari'},
-//     _id:1,
-//     description: "this is ",
-//     image:"/logo.png",
-//     category:"Robots",
-//     title:"We Robots",
-//   },
-// ];
+  
   return (
     <>
     <section className="pink_container">
